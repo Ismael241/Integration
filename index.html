@@ -1,0 +1,72 @@
+
+<!DOCTYPE html>
+<html lang="fr">
+      <head>
+          <meta charset="UTF-8">
+          <meta name="viewport" content="width=device-width, initial-scale=1.0">
+          <meta http-equiv="X-UA-Compatible" content="ie=edge">
+          <link rel="stylesheet" href="style.css">
+          <title>
+              Trouver un emploi sur meteojob  
+          </title>
+      </head>
+    <body>  
+      <div class="entete">
+        <img src="https://media.meteojob.com/theme/2.3/images/logo-white.png?201802221640&amp;f23d2ac508759791af3dee5079074976acb27b71" alt="">
+        <h1 class="sous-logo">Créez votre profil Meteojob</h1>  
+      </div>
+      <main class="contenu"> 
+
+          <!--nom et prénoms-->
+              <form method="GET">
+                    <label for="" class="black">Prénom</label><label class="nom black" for="surname">Nom</label><br>
+                    <input type="text" placeholder=" Votre prénom" id="surname" class="f1 " required/>
+                    <input type="text" placeholder=" Votre nom" id="surname" class="f1 " required />
+
+          <!--email-->
+                    <label for="" class="black">Adresse e-mail</label>
+                    <input type="text" placeholder=" Votre e-mail" class="form" id="surname" required />
+
+          <!--mot de passe-->
+                    <label for="" class="form black">Mot de passe</label>
+                    <div class="motflex">    
+                        <input type="password" placeholder=" Votre Mot de passe" class="form pb" id="surname" required/><br><br>
+                        <img src="oeil.png" class="oeil"  alt="">
+                    </div>
+
+          <!--poste recherché-->
+                    <label for="" class="black">Poste recherché</label>
+                    <input type="text" placeholder=" Ex: Chef de projet cuisinier.." class="form" id="surname" required />                        
+                    
+
+          <!--lieu de travail-->
+                    <label for="" class="black">Où souhaitez-vous travailler?</label>
+                    <input type="text" placeholder=" Ex: Essonne, Nantes,Bretagne" id="surname" class="form" required /><br><br>
+                    <label for="" class="black">Type de contrat recherché</label><br>
+                    <input type="button" value="CDI" class="bouton prémier">
+                    <input type="button" value="CDD" class="bouton">
+                    <input type="button" value="Indépendant/Franchisé" class="bouton btn">
+                    <input type="button" value="Intérim" class="bouton">
+                    <input type="button" value="Stage" class="bouton">
+                    <input type="button" value="Alternance/Apprentissage" class="bouton btn">
+                    <input type="button" value="+ de type de contrat" class=" dernier black">
+              </form>
+
+          <!--flexbox-->
+              <form class="flexi">
+                  <div class="conditions">J'accepte les <span style="text-decoration: underline;" >conditions générales</span>  pour creer mon compte,<br>bénéficier des services de matching et postuler aux offres
+                  </div>
+            
+          <!--bouton on/off-->
+                <div>
+                  <section class="switch">
+                    <input id="toggle-4" class="toggle toggle-round-right-left" type="checkbox" />
+                    <label for="toggle-4"></label>   
+                  </section>  
+                </div>
+              </form> 
+          <p id="fin" ><input type="submit" value="Continuer" class="manu">
+          </p>
+      </main>
+    </body>
+</html>
