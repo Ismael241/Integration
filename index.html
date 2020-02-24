@@ -21,7 +21,7 @@
               <form method="GET">
                     <label for="" class="black">Prénom</label><label class="nom black" for="surname">Nom</label><br>
                     <input type="text" placeholder=" Votre prénom" id="surname" class="f1 " required/>
-                    <input type="text" placeholder=" Votre nom" id="surname" class="f1 " required />
+                    <input type="text" placeholder=" Votre nom" id="surname" class="f1 f2" required />
 
           <!--email-->
                     <label for="" class="black">Adresse e-mail</label>
@@ -30,7 +30,7 @@
           <!--mot de passe-->
                     <label for="" class="form black">Mot de passe</label>
                     <div class="motflex">    
-                        <input type="password" placeholder=" Votre Mot de passe" class="form pb" id="surname" required/><br><br>
+                        <input type="password" placeholder=" Votre Mot de passe" class="form pb" id="surname" required/>
                         <img src="oeil.png" class="oeil"  alt="">
                     </div>
 
@@ -41,32 +41,53 @@
 
           <!--lieu de travail-->
                     <label for="" class="black">Où souhaitez-vous travailler?</label>
-                    <input type="text" placeholder=" Ex: Essonne, Nantes,Bretagne" id="surname" class="form" required /><br><br>
+                    <input type="text" placeholder=" Ex: Essonne, Nantes,Bretagne" id="surname" class="form" required />
                     <label for="" class="black">Type de contrat recherché</label><br>
-                    <input type="button" value="CDI" class="bouton prémier">
-                    <input type="button" value="CDD" class="bouton">
-                    <input type="button" value="Indépendant/Franchisé" class="bouton btn">
-                    <input type="button" value="Intérim" class="bouton">
-                    <input type="button" value="Stage" class="bouton">
-                    <input type="button" value="Alternance/Apprentissage" class="bouton btn">
-                    <input type="button" value="+ de type de contrat" class=" dernier">
-              </form>
+
+          <!-- type contrat--> 
+          
+				
+            <div class="gridd">
+              <div>
+                <input type="checkbox" value="CDI" name="type" id="1" checked>
+                <label class ="box" for="1">CDI</label>
+                
+                <input type="checkbox" value="CDD" name="type" id="2">
+                <label class ="box box3" for="2">CDD</label>
+
+                <input type="checkbox" value="Indépendant/Franchisé" name="type" id="3">
+                <label class ="box2 box3" for="3">Indépendant/<br>Franchisé</label>
+
+                <input type="checkbox" value="Intérim" name="type" id="4">
+                <label class ="box box3" for="4"> Intérim</label>
+
+                <input type="checkbox" value="Stage" name=type id="5">
+                <label class ="box box3" for="5">Stage</p></label>
+
+                <input type="checkbox" value="Alternance/Apprentissage" name="type" id="6">
+                <label class ="box2 box3" for="6">Alternance/ Apprentissage</label>   
+                <span class="lastbutton"> + de type de contrat</span>
+              </div>
+            </div>
+                    
+              
 
           <!--flexbox-->
-              <form class="flexi">
-                  <div class="conditions">J'accepte les <span style="text-decoration: underline;" >conditions générales</span>  pour creer mon compte,<br>bénéficier des services de matching et postuler aux offres
-                  </div>
-            
+            <div class="flexi">
+                  <div class="conditions">J'accepte les <span style="text-decoration: underline;" >conditions générales</span>  pour créer mon compte,<br>bénéficier des services de matching et postuler aux offres</div>
+                  
+
           <!--bouton on/off-->
-                <div>
-                  <section class="switch">
-                    <input id="toggle-4" class="toggle toggle-round-right-left" type="checkbox" />
-                    <label for="toggle-4"></label>   
-                  </section>  
-                </div>
-              </form> 
-          <p id="fin" ><input type="submit" value="Continuer" class="manu">
-          </p>
+       
+                <input type="checkbox" id="yn">
+                <label class="yn-btn" for="yn">
+                <p class="no"><span>NON</span></p>
+                <p class="yes"><span>OUI</span></p>
+                </label></div> 
+           </form> 
+     
+           <p id="fin" ><input type="submit" value="Continuer" class="manu"></p>
+          
       </main>
     </body>
 </html>

@@ -51,8 +51,12 @@ label{
 }
 
 .f1{
-  width: 206.5px;
+  width: 198px;
 height: 18.5px;
+}
+
+.f2{
+	margin-left: 16px;
 }
 
 .form{
@@ -60,33 +64,30 @@ height: 18.5px;
     height: 18px;
 }
 
-.btn{
-	padding: 15
+.btn {
+	padding: 15;
+	display: inline-block;
+	word-wrap: break-word;
+	text-align: center;
+
 }
 
 .nom{
-	margin-left: 165px;
+	margin-left: 170px;
 	color: #16354e;
 }
 
 .black{
 	color: #16354e;
-	font-weight: normal;
+	font-weight: bold;
 	font-size: 14px;
 	line-height: 30px;
+	
 }
 
-.bouton{
-    background-color: rgb(236, 230, 230);
-       width: 100px;
-       height: 35px;
-       font-size: 13px;
-       border: 1px solid white;
-	   margin: 2px;
-	   color: #16354e;
-}
 
 /*les flexbox*/
+
 .flexi{
 	display: flex;
 	justify-content: space-around;
@@ -102,22 +103,12 @@ height: 18.5px;
 
 .pb{
 	border: none;
+	outline: none;
 }
 
 .prémier{
 	background-color: #0f7ec5;
 	color: white;
-}
-
-.manu{
-	background-color: #0f7ec5;
-       width: 100px;
-       height: 35px;
-       font-size: 13px;
-	   border: 1px solid white; 
-	   color: white; 
-	   font-family: "Open Sans", Arial, sans-serif;
-	  margin-left: 355px;
 }
 
 #fin{
@@ -131,127 +122,150 @@ label{
 }
 
 .conditions{
-			font-size: 14px;
+			font-size: 12px;
 			text-align: justify;
-			margin-top: 20px;
-			margin-left: -6px;
+			margin-top: 10px;
+			margin-left: -25px;
 			font-weight: normal;
 			line-height: 20px;
-			
 			letter-spacing: normal;
+			
 }
+
+
+   /*Les boutons*/
+
+.gridd{
+	width: 422px;
+}
+.gridd input{
+	display:none;
+	background-color: lightgray;
+}
+.gridd div {
+ 	display: grid;
+	grid-template-columns: 1fr 1fr 1fr 1fr;
+	grid-column-gap: 15px;	
+	grid-row-gap: 15px;
+	
+}
+input:checked + label {
+	background-color: rgb(48,136,188);
+	color:white;
+}
+
+.gridd > div label{
+	text-align: center;
+	font-size: 14px;
+	line-height: 15px;
+		
+}
+
+.gridd label{
+	background-color: #F2F2F2;
+}
+
+.box{
+	padding-top: 10px;
+	font-size: 13px;
+	font-weight: normal;
+	font-family: "Open Sans", Arial, sans-serif;
+	height: 22px;
+	letter-spacing: normal;
+}
+
+.box2{
+	vertical-align: middle;
+	font-size: 13px;
+	font-weight: normal;
+	font-family: "Open Sans", Arial, sans-serif;
+	letter-spacing: normal;
+	
+}
+
+.box3{
+	color: #16354e;
+}
+
+.lastbutton{
+	font-size:13px;
+	font-weight: normal;
+	font-family: "Open Sans", Arial, sans-serif;
+	width: 120px;
+	padding-top: 8px;
+
+}
+
+.manu{
+	background-color: #0f7ec5;
+       width: 100px;
+       height: 35px;
+       font-size: 15px;
+	   border: 1px solid white; 
+	   color: white; 
+	   font-family: "Open Sans", Arial, sans-serif;
+	  margin-left: 355px;
+	  letter-spacing: normal;
+}
+
+/*.........................................................................*/
 
 /*Bouton on/off */
-.switch {
-		display: block;
-		padding: 0 10px 20px 0;
-		margin-right: -105px;
-		margin-top: 27px;
+#yn {
+    display: none;
 }
 
-.switch h3 {
-	font-weight: normal;
+.yn-btn {
+    display: grid;
+    gap: 0px;
+    width: 60px;
+	margin-left: -5px;
+	margin-top: 4px;
 }
 
-.toggle {
-	position: absolute;
-	margin-left: -9999px;
-	visibility: hidden;
+#yn:checked ~ .yn-btn {
+    grid-template-columns: 0% 100%;
 }
 
-.toggle + label {
-	display: block;
-	position: relative;
-	cursor: pointer;
-	border-radius: 60px;
-	padding: 2px;
-	width: 145px;
-	height: 50px;
-	overflow: hidden;
+
+
+#yn ~ .yn-btn {
+    grid-template-columns: 100% 0%;
 }
 
-.toggle + label:before, .toggle + label:after {
-	display: block;
-	border-radius: 60px;
-	position: absolute;
-	top: 1px;
-	left: 1px;
-	bottom: 1px;
-	padding: 5px;
-	color: rgb(241, 233, 233);
+.yn-btn p {
+    overflow: hidden;
+    margin-left: 0px;
+    background-color: #cccccc;
+    color: white;
+    height: 25px;
+    transition: 0.4s;
+    border-radius: 6px;
 }
 
-.toggle + label:before {
-	content: "off";
-	right: 1px;
-	background-color: #1ba07f;
-	text-indent: -90px;
+.no  {
+    text-align: right;
 }
 
-.toggle + label:after {
-	content: "on";
-	text-indent: 90px;
-	width: 10px;
-	background-color: #fff;
-	margin: 1px;
-	box-shadow: 0 2px 5px rgba(000,000,000,0.2)
+.yes  span{
+    background-color:#3598db;
+    width: 50%;
+    height: 100%;
+    display: inline-block;
+    text-align: center;
+	
+	
 }
 
-.toggle:checked + label:before {
-	background-color: #0088cc;
-	text-indent: 0;
-}
-.toggle:checked + label:after {
-	margin-left: 101px;
-	box-shadow: none;
+.no span {
+    background-color: rgb(94, 100, 94);
+    width: 50%;
+    height: 100%;
+    text-align: center;
+    display: inline-block;
+    
+
 }
 
-/* SWITCH 3 - RIGHT LEFT
-========================== */
-input.toggle-round-right-left + label {
-	text-align: center;
-	overflow: hidden;
-	height: 30px;
-	border-radius: 0;
-}
-input.toggle-round-right-left + label:before, input.toggle-round-right-left + label:after {
-	width: 25%;
-	height: 58%;
-	padding-top: 12%;
-	color: #FFF;
-	border-radius: 0;
-	padding-left: 0;
-	padding-right: 0;
-	padding-bottom: 5px;
-}
-input.toggle-round-right-left + label:before {
-	content: "NON";
-	background-color: #a89f9f;
-    text-indent: inherit;
-    padding-top: 2.5px;
-}
-input.toggle-round-right-left + label:after {
-	content: "OUI";
-	background-color: #0088cc;
-	top: 0;
-	left: -101%;
-	box-shadow: none;
-    text-indent: inherit;
-    padding-top: 2px;
-}
-input.toggle-round-right-left:checked + label:before {
-	left: 5%;
-	background-color: #e7e7e7;
-}
-input.toggle-round-right-left:checked + label:after {
-	margin-left: 0;
-	left: 0;
-}
 
-/* Transition */
-.toggle + label:before, .toggle + label:after {
-	transition: All 0.5s ease;
-	-webkit-transition: All 0.5s ease;
-	-moz-transition: All 0.5s ease;
-	-o-transition: All 0.5s ease;
-}
+/*   <p id="fin" ><input type="submit" value="Continuer" class="manu"></p>*/
